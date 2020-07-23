@@ -1,0 +1,30 @@
+.main-chat
+  .group-info
+    .group-info__group
+      .group-info__group-name
+        faa
+      %ul.group-info__member-list
+        Member：
+        %li.group-info__member
+          鈴木琴也
+    = link_to "#", class: "group-info__edit" do
+      Edit
+
+  .message-field
+    .message-box
+      .message-info
+        .message-info__name
+          鈴木琴也
+        .message-info__date
+          2020/7/23
+      .message
+        faa
+
+  .footer
+    %form.form
+      .form__contents
+        %input.form__input-content{"type": "text", "placeholder": "type a message"}
+        %label.form__input-image
+          = icon('far', 'image', class: "form__icon")
+          %input.hidden{type: "file"}
+      %input.form__submit{"type": "submit", "value": "Send"}
