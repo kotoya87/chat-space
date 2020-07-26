@@ -2,29 +2,30 @@
   .group-info
     .group-info__group
       .group-info__group-name
-        faa
+        = @group.name
       %ul.group-info__member-list
-        Member：
+        = @group.users
         %li.group-info__member
-          鈴木琴也
-    = link_to "#", class: "group-info__edit" do
-      Edit
+    .group-info__edit
+      = link_to edit_group_path(@group) do
+        Edit
 
   .message-field
+    = render @messages
     .message-box
       .message-info
         .message-info__name
           鈴木琴也
         .message-info__date
-          2020/7/23
+          faa
       .message
-        faa
+        こんにちは
 
   .footer
-    %form.form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__contents
-        %input.form__input-content{"type": "text", "placeholder": "type a message"}
-        %label.form__input-image
-          = icon('far', 'image', class: "form__icon")
-          %input.hidden{type: "file"}
-      %input.form__submit{"type": "submit", "value": "Send"}
+        = f.text_field :content, class: 'form__input-content', placeholder: 'type a message'
+        = f.label :image, class: 'form__input-image' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
