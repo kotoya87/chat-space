@@ -110,14 +110,14 @@
   overflow: scroll;
 }
 
-.message-box{
+.MessageBox{
   margin-bottom: 46px;
 }
 
-.message-info{
+.MessageInfo{
   margin-bottom: 12px;
   display: flex;
-  &__name{
+  &__userName{
     color: #333333;
     font-size: 16px;
     font-weight: bold;
@@ -129,7 +129,7 @@
   }
 }
 
-.message{
+.Message{
   color: #434a54;
   font-size: 14px;
 }

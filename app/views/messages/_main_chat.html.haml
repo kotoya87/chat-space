@@ -12,14 +12,11 @@
 
   .message-field
     = render @messages
-    .message-box
-      .message-info
-        .message-info__name
-          鈴木琴也
-        .message-info__date
-          faa
-      .message
-        こんにちは
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__userName
+        .MessageInfo__date
+      .Message
 
   .footer
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
