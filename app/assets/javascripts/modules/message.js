@@ -53,7 +53,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       let html = buildHTML(data);
       $('.message-field').append(html);      
       $('form')[0].reset();
