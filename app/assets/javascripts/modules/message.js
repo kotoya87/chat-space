@@ -58,11 +58,11 @@ $(function(){
       $('.message-field').append(html);      
       $('form')[0].reset();
       $('.message-field').animate({ scrollTop: $('.message-field')[0].scrollHeight});
-      $('.Form__submit').prop("disabled", false);
+      $('.form__submit').prop("disabled", false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-      $('.Form__submit').prop("disabled", false);
+      $('.form__submit').prop("disabled", false);
     });
   });
 });
