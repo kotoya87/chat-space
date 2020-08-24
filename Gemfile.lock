@@ -349,12 +349,9 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   devise
-<<<<<<< Updated upstream
-  fog-aws
-=======
   factory_bot_rails
   faker
->>>>>>> Stashed changes
+  fog-aws
   font-awesome-sass
   haml-rails (>= 1.0, <= 2.0.1)
   jbuilder (~> 2.7)
