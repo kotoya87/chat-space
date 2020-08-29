@@ -4,8 +4,10 @@
       .group-info__group-name
         = @group.name
       %ul.group-info__member-list
-        = @group.users
-        %li.group-info__member
+        = 'Member：'
+        - @group.users.each do |user|
+          %li.group-info__member
+            = user.name
     .group-info__edit
       = link_to edit_group_path(@group) do
         Edit
